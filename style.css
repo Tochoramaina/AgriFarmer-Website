@@ -1,0 +1,747 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.offset::before{
+    display: block;
+    content: " ";
+    height: 6rem;
+    margin-top: -2rem;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+h3{
+    font-size: 44px;
+    line-height: 55px;
+    color: #121212;
+    font-weight: 600;
+}
+h6{
+    font-size: 21px;
+    line-height: 32px;
+    font-weight: normal;
+    color: #979885;
+    margin-bottom: 16px;
+}
+
+.main-btn{
+    display: inline-block;
+    font-weight: 700;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 0 32px;
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid transparent;
+    line-height: 48px;
+    color: rgb(132, 93, 41);
+    position: relative;
+    transition: all 0.4 ease-out 0s;
+    cursor: pointer;
+    z-index: 5;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 6.5rem;
+    background-color: transparent;
+    transition: all 0.3 ease;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+}
+.nav .scrolled{
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+    box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.3);
+}
+.nav .navbar-toggler{
+    display: none;
+    border: none;
+    outline: none;
+}
+.nav .navbar-toggler .toggler-icon{
+    width: 36px;
+    height: 3px;
+    background: black;
+    margin: 5px 0;
+    position: relative;
+    display: block;
+    transition: all 0.3s ease-out 0s;
+}
+.nav .menubar .menu-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.nav .menubar .menu-items li{
+    margin: 0 20px;
+}
+.nav .menubar .menu-items li a{
+    color: #080303;
+    font-size: 22px;
+    font-weight: 600;
+}
+.nav .menubar .menu-items li a:hover{
+    color: #7654c6;
+}
+.nav .navbar-socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.nav .navbar-socials span{
+    color: #e75656;
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 10px;
+}
+.nav .navbar-socials ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.nav .navbar-socials ul li{
+    margin: 0 7px;
+}
+.nav .navbar-socials ul li a{
+    color: #7654c6;
+    font-size: 14px;
+}
+
+.back{
+    background: url('/images/pexels-tim-mossholder-974314.jpg');
+    width: 100%;
+    height: 110vh;
+    position: relative;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.back .overlay{
+    /*background-image: linear-gradient(rgba(131, 137, 155, 0.9)0%, rgba(237, 254, 254, 0.9)24%, rgb(126, 2549, 255)81%);*/
+    width: 100%;
+    height: 100%;
+}
+.back .hero-shape{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.back .hero-shape img{
+    width: 100%;
+    display: block;
+}
+.hero-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.hero-text h6{
+    color: #f1f1f5;
+}
+.hero-text .header-btn{
+    margin-top: 22px;
+}
+.hero-text .header-btn li{
+    display: inline-block;
+    margin: 10px 10px 0 0;
+}
+.hero-text .header-btn li a.main-btn{
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 0;
+    line-height: 40px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.hero-text .header-btn li a.main-btn i{
+    margin-left: 5px;
+}
+.hero-text .header-btn .btn-one{
+    color: #fff;
+}
+.hero-text .header-btn .btn-one::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #2c8852, #63520c);
+    z-index: -1;
+    transition: all 0.3s ease;
+    background-position: right center;
+}
+.hero-text .header-btn .btn-one:hover::before{
+    background-image: linear-gradient(to left, #0b7637, #63520c);
+    background-position: left center;
+}
+.hero-text .header-btn .btn-two:hover::before{
+    box-shadow: 0 3px 75px rgba(19, 4, 4, 0.16);
+}
+#wrapper{
+    margin: 5rem 1rem 3rem 2rem;
+}
+.service{
+    width: 100%;
+    height: 103vh;
+    padding: 0 8%;
+    margin-bottom: 20rem;
+}
+.service h3{
+    text-align: center;
+    margin: 20px;
+}
+.service h6{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.service .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+}
+.service .services{
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    background: transparent;
+    transition:  transform 0.5s, background 0.5s;
+}
+.service .services img{
+    color: #023f6e;
+    width: 200px;
+    height: 150px;
+    margin-bottom: 2rem;
+}
+.service .services h2{
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.service .services h6{
+    font-size: 1.3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.service .row .services:hover{
+    background-image: linear-gradient(to right, #0b7637, #63520c);
+    /*background: #0a8a24;*/
+    color: #fff;
+    transform: scale(1.05);
+}
+.service .services img:hover{
+    transform: scale(1.21);
+}
+
+.pricing{
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10rem;
+}
+.pricing h6{
+    margin-bottom: 6rem;
+}
+.pricing .table{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.pricing .basic{
+    width: 355px;
+    height: 100%;
+    border-radius: 20px;
+    border: 1px solid #535cf1;
+}
+.pricing .basic h3{
+    text-align: center;
+    padding: 40px 0;
+    font-weight: 300;
+    background: #d2d2d1;
+    transition: all  ease 0.6s;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    clip-path: polygon(0 0, 100% 0,  100% 80%, 0 100%);
+}
+.pricing .basic:hover h3{
+    background-image: linear-gradient(to right, #0b7637, #63520c);
+    clip-path: polygon((0 0, 100% 0, 100% 80%, 0 100%));
+    color: #fff;
+}
+.pricing .standard h3{
+    background-image: linear-gradient(to right, #0b7637, #63520c);
+    clip-path: polygon((0 0, 100% 0, 100% 80%, 0 100%));
+    color: #fff;
+}
+.pricing .basic .price{
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+}
+.pricing .basic .sign{
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    vertical-align: middle;
+}
+.pricing .basic .currency{
+    font-size: 40px;
+    font-weight: 300;
+    vertical-align: middle;
+    letter-spacing: -2px;
+    line-height: 60px;
+    padding: 0;
+}
+.pricing .basic .cent{
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 400;
+    vertical-align: bottom;
+}
+.pricing .basic .month{
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    vertical-align: bottom;
+}
+.pricing .basic ul li{
+   border-top: 1px solid #ccc; 
+   padding: 18px;
+   border-bottom: 1px solid #ccc;
+   color : #727b7c
+}
+.pricing .basic ul li i{
+    padding-right: 5px;
+}
+.pricing .header-btn{
+    margin: 2rem auto;
+    width: 170px;
+}
+.pricing .header-btn a{
+    border: 1px solid #026e06;
+    border-radius: 50px;
+    font-weight: normal;
+    color: #1d1d1d;
+    font-size: 16px;
+    outline: medium none;
+}
+.pricing .basic:hover .header-btn a{
+    background-image: linear-gradient(to right, #0b7637, #63520c);
+    color: #fff;
+    border: 1px solid #2ecc71;
+}
+.pricing .standard .header-btn a{
+    background-image: linear-gradient(to left, #0b7637, #63520c);
+    color: #fff;
+    border: 1px solid #2ecc71;
+}
+
+.calltoact{
+    background: linear-gradient(to right, rgba(7, 237, 41, 0), rgb(4, 80, 6)), url(images/vecteezy_hands-holding-small-tree-to-be-planted_1227675.jpg);
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 16rem;
+}
+.calltoact .parallax{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.calltoact .parallax h3, .calltoact .parallax p{
+    color: #fff;
+}
+.calltoact .parallax p{
+    font-size: 18px;
+    padding: 20px 0;
+}
+.calltoact .parallax .call-news{
+    background-color: #fff;
+    max-width: 450px;
+    margin: auto;
+    border-radius: 50px;
+    padding: 12px 0px 15px 12px;
+    position: relative;
+}
+.calltoact .parallax .call-news i{
+    color: #023f6e;
+    font-size: 16px;
+    padding-right: 10px;
+}
+.calltoact .parallax .call-news input{
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+.calltoact .parallax .call-news button{
+    background-image: linear-gradient(to right, #0b7637, #63520c);
+    border: none;
+    outline: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.contact h6{
+    margin-bottom: 1rem;
+}
+.contact .form{
+    width: 70%;
+}
+.contact .form .first-row, .contact .form .first-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0;
+}
+.contact .form .first-row input, .contact .form .first-row input{
+    width: 47%;
+    height: 56px;
+    border: 1px solid #cbced1;
+    padding: 0 25px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 10px;
+}
+.contact .form  textarea{
+    width: 100%;
+    resize: none;
+    padding: 0 25px;
+    outline: none;
+    border: 1px solid #cbced1;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 15px;
+    font-size: 18px;
+}
+.contact .form .header-btn{
+    margin: 2rem auto;
+    width: 170px;
+}
+.contact .form .header-btn a{
+    background-image: linear-gradient(to right, #0b7637, #63520c);
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    border: none;
+    outline: none;
+}
+footer{
+    background: linear-gradient(135deg, #0a8a24, #cece0b);
+    padding: 7rem;
+}
+footer .row-one{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+footer .row-one a{
+    padding-right: 20px;
+    font-size: 16px;
+    color: #eae6e6;
+}
+footer .row-one ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+footer .second-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer .second-row h6{
+    font-size: 16px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    color: #bfbdbd;
+    line-height: 32px;
+}
+footer .second-row li{
+    padding-bottom: 12px;
+}
+footer .second-row li a{
+    font-size: 17px;
+    font-weight: 500;
+    color: #c8c7c7;
+    line-height: 24px;
+}
+footer .second-row .first-row:nth-child(4){
+    max-width: 300px;
+}
+footer .second-row .newsletter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 5px;
+}
+footer .first-row .newsletter input{
+    width: 100%;
+    height: 44px;
+    padding: 0 25px;
+    border-radius: 50px;
+    background: rgba(80, 78, 78, 0.16);
+    border: 0;
+    font-weight: 500;
+    outline: none;
+}
+footer .second-row .newsletter input::placeholder{
+    color: #c2bebe;
+    opacity: 1;
+}
+footer .first-row .newsletter button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-image: none;
+    font-size: 16px;
+    border: 0;
+    color: #6c6c6c;
+    cursor: pointer;
+}
+footer .first-row .text{
+    margin-top: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #cfcbcb;
+}
+.copyright{
+    text-align: center;
+    font-size: 1rem;
+    font-family: sans-serif;
+    padding: 10px;
+    color: #fff;
+    background-image: linear-gradient(to right, #124326, #c09e1a);
+}
+.copyright span{
+    color: rgb(76, 13, 192);
+    font-size: 1.1rem;
+}
+@media only screen and (max-width: 946px){
+    .nav{
+        padding: 1rem 3rem;
+    }
+    .nav .navbar-socials{
+        display: none;
+    }
+    .hero-text{
+       width: 60%;
+    }
+    .hero-text h3{
+        font-size: 33px;
+    }
+    #wrapper{
+        margin: 3rem 3rem 10rem 3rem;
+    }
+    .service{
+        width: 100%;
+        height: 143vh;
+        padding: 0 4%;
+        margin-bottom: 36rem;
+        align-items: center;
+    }
+    .service h3{
+        text-align: center;
+        margin: 20px;
+    }
+    .service h6{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+   
+    .service .services img{
+        color: #023f6e;
+        width: 200px;
+        height: 150px;
+        margin-bottom: 2rem;
+    }
+    .service .services h2{
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .service .services h6{
+        font-size: 1.3rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .service .row .services:hover{
+        background-image: linear-gradient(to right, #0b7637, #63520c);
+        color: #fff;
+        transform: scale(1.02);
+    }
+    .service .services img:hover{
+        transform: scale(1.21);
+    }
+   
+    .pricing .table{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .pricing .basic{
+        margin-bottom: 3rem;
+    }
+    .calltoact{
+        margin-bottom: 5rem;
+    }
+    .calltoact .parallax{
+        width: 80%;
+    }
+    .contact .form{
+        width: 80%;
+    }
+      
+}
+@media only screen and (max-width: 774px){
+    .nav{
+       padding: 0.7rem 1rem;
+    }
+    
+    .nav .navbar-toggler{
+        display: block;
+        position: absolute;
+        top: 26px;
+        right: 16px;
+        z-index: 10000;
+    }
+    .nav .menubar{
+        position: fixed;
+        top: 55px;
+        width: 300px;
+        right: -360px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.9);
+        transition: all 0.4s ease;
+    }
+    .nav .menubar .menu-items{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: justify;
+        margin: 40px 0;
+    }
+    .nav .menubar .menu-items li{
+        margin: 2rem 40px;
+    }
+    .hero-text{
+        width: 80%;
+     }
+     .hero-text h3{
+         font-size: 33px;
+     }
+
+    #wrapper{
+        margin: 3rem 1rem 10rem 1rem;
+    }
+    .service{
+        width: 100%;
+        height: 143vh;
+        padding: 0 4%;
+        margin-bottom: 36rem;
+        align-items: center;
+    }
+    .service h3{
+       font-size: 33px;
+    }
+    .service h6{
+       font-size: 16px;
+    }
+   
+    .pricing h3{
+        font-size: 33px;
+    }
+    .pricing h6{
+        font-size: 16px;
+    }
+    .pricing .table{
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .pricing .basic{
+        margin-bottom: 3rem;
+    }
+    .calltoact .parallax{
+        width: 90%;
+    }
+    .calltoact .paralla h3{
+        font-size: 33px;
+    }
+    .calltoact .paralla h6{
+        font-size: 16px;
+    }
+    .calltoact .parallax .call-news input{
+        font-size: 16px;
+    }
+    .calltoact .parallax .call-news button{
+        font-size: 15px;
+    }
+    .contact h3{
+        font-size: 33px;
+    }
+    .contact h6{
+        font-size: 16px;
+    }
+    .contact .form{
+        width: 80%;
+    }
+    .contact .form .header-btn a{
+        font-size: 16px;
+    }
+    footer{
+        padding: 4rem 1rem;
+    }
+    footer .second-row{
+        flex-wrap: wrap;
+    }
+    footer .second-row .first-row{
+        margin-bottom: 1rem;
+    }
+}
+@media only screen and (max-width: 946px){
+    
+}
